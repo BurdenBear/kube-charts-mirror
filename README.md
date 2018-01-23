@@ -14,7 +14,8 @@ charts仓库组织方式其实很简单，只有一个索引文件和对应压�
 $ helm repo add stable https://burdenbear.github.io/BurdenBear/kube-charts-mirror/
 ```
 
-或者参照以下步骤搭建您自己的仓库
+或者参照以下步骤搭建您自己的仓库：
+
 1.fork 该项目
 
 2.clone代码到一台能访问国外地址的服务器
@@ -42,8 +43,7 @@ GIT_USER_EMAIL: git config 中的user.email
 UPDATE_INTERVAL: 更新间隔，秒为单位，默认86400(3天)
 ```
 
-4.
-在fork后的项目settings里设置开启gitPage，定位到master分支的docs
+4.在fork后的项目settings里设置开启gitPage，定位到master分支的docs
 
 联系邮箱：
 burdenbear@fxdayu.com

@@ -19670,4 +19670,4 @@ entries:
     sources: ['https://github.com/coreos/zetcd']
     urls: ['https://burdenbear.github.io/kube-charts-mirror/zetcd-0.1.0.tgz']
     version: 0.1.0
-generated: 2018-01-22 13:34:09.999120
+generated: '2018-01-22T13:34:09.999120000Z'

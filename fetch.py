@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# encoding: utf-8
 
 import yaml
 import requests
@@ -64,7 +65,7 @@ def main():
     if repo_url is None:
         raise RuntimeError("You must specify a git repo!")
     p = urlparse(repo_url)
-    git_user = p.username
+    git_user = p.path.split("/")[-2]
     repo_name = p.path.split("/")[-1].split(".")[0]
     default_mirror = "https://%s.github.io/%s/" % (git_user.lower(), repo_name)
     mirror_url = os.environ.get("MIRROR_URL", default_mirror)

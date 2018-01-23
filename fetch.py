@@ -82,10 +82,12 @@ def main():
             target = os.path.join(root, tar_name)
             new_chart["urls"][0] = "/".join(
                 [mirror_url[:-1] if mirror_url.endswith("/") else mirror_url, tar_name])
+            # datetime format issure
+            new_chart["created"] = new_chart["created"].strftime('%Y-%m-%dT%H:%M:%S.%f000Z')
             if os.path.exists(target):
                 continue
             wget(url, target)
-
+    new["generated"] = new["generated"].strftime('%Y-%m-%dT%H:%M:%S.%f000Z')
     with open(os.path.join(root, "index.yaml"), "w") as f:
         yaml.dump(new, stream=f)
 

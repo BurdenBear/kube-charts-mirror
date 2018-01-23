@@ -1,4 +1,4 @@
-FROM python:3-alpine
+FROM python:3
 
 WORKDIR /root/
 
@@ -10,4 +10,4 @@ COPY ./*.* ./
 
 VOLUME ["/mnt/charts/"]
 
-ENTRYPOINT ["/root/update.sh"]
+CMD ["/root/update.sh"]

@@ -1,12 +1,16 @@
 #!/usr/bin/env bash
 
 repo=$GIT_REPO
+user=$GIT_USER_NAME
+email=$GIT_USER_EMAIL
 interval=${UPDATE_INTERVAL:-86400}
 root=/mnt/charts
 
 mkdir -p $root
 
 function init(){
+git config --global user.name $user
+git config --global user.email $email
 cd $root
 if [ ! -d ".git" ]; then
   git init

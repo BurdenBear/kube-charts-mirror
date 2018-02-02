@@ -11,7 +11,7 @@ charts仓库组织方式其实很简单，只有一个索引文件和对应压�
 
 ## 食用方式：
 ```
-$ helm repo add stable https://burdenbear.github.io/BurdenBear/kube-charts-mirror/
+$ helm repo add stable https://burdenbear.github.io/kube-charts-mirror/
 ```
 
 或者参照以下步骤搭建您自己的仓库：

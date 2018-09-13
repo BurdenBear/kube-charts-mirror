@@ -1,0 +1,23 @@
+version: '2'
+services:
+  kube-charts-mirror:
+    image: kube-charts-mirror:latest
+    build .
+    restart: always
+    container_name: kube-charts-mirror
+    hostname: kube-charts-mirror
+    environment:
+    - GIT_REPO=
+    - GIT_USER_NAME=
+    - GIT_USER_EMAIL=
+    volumes:
+    - .:/mnt/charts
+  static:
+    image: nginx:stable-alpine
+    restart: always
+    container_name: kube-charts-mirror-static
+    hostname: kube-charts-mirror-static
+    ports:
+    - 7000:80
+    volumes:
+    - ./docs:/usr/share/nginx/html:ro
